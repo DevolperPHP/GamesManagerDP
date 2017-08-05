@@ -10,7 +10,7 @@ use pocketmine\level\Position;
 use pocketmine\utils\TextFormat as Color;
 use pocketmine\utils\Config;
 
-class World extends PluginBase implements Listener{
+class GamesManagerDP/Event-Command/SetGameWord extends PluginBase implements Listener{
 	
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
