@@ -21,7 +21,7 @@ class Main extends PluginBase implements Listener{
     $level = [
       $level => 'world',
     ];
-    $cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, $pos);
+    $cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, $level);
     $cfg->save();
   }
   
