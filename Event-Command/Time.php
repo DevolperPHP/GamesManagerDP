@@ -1,6 +1,6 @@
 <?php
 
-namespace GameManager/Time.php
+namespace GameManager/Time.php;
   
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
