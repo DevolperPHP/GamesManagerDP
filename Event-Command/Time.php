@@ -5,9 +5,8 @@ namespace GameManager/Time.php;
   
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\scheduler\PluginTask;
 use pocketmine\utils\TextFormat as Color;
-use GameManagerDP/Time/time;
 
 class Main extends PluginBase implements Listener{
   
@@ -22,6 +21,8 @@ class Main extends PluginBase implements Listener{
     $level = [
       $level => 'world',
     ];
+    $cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, $pos);
+    $cfg->save();
   }
   
 	
