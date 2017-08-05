@@ -28,5 +28,46 @@ class GamesManagerDP/FreezMoveTimer extends PluginBase implements Listener{
 		$this->getConfig()->save();
   }
   
-  
+  public function tick(){
+
+		$level = $this->getConfig()->get("world");
+		$game = $this->getServer()->getLevelByName("$level")->getPlayers();
+		if($this->time == "on"){
+			$this->second--;
+		}
+
+		foreach($game as $p){
+
+			if($this->second > 60 && $this->second < 9){
+
+				$p->sendTip($this->minute.":0".$this->second);
+			}
+
+			
+			if($this->time == "on"){
+				if($this->second == 0){
+					$this->second = 60;
+					$this->minute--;
+
+				}
+			}
+		}
+	}
+	
+  public function onMove(PlayerMoveEvent $event){
+
+    $player = $event->getPlayer();
+	  
+    $level = $this->getConfig()->get("world");
+    $game = $this->getServer()->getLevelByName("$level")->getPlayers();
+	  
+    foreach($game as $p){
+      $event->setCancelled(true);
+      
+      if($this->second < 0 && $this->second > 0){
+        $event->setCancelled(false);
+      }
+    }
+
+  }
 }
