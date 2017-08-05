@@ -1,6 +1,6 @@
 <?php
 
-namespace GamesManagerDP/SetGameWorld;
+namespace GamesManagerDP/Event-Command/SetGameWorld;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
