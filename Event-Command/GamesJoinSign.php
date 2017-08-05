@@ -15,7 +15,7 @@ use pocketmine\level\Level;
 use pocketmine\Player;
 use pocketmine\Server;
 
-class GamesManagerDP/GameJoinSign extends PluginBase implements Listener{
+class GamesManagerDP/Event-Command/GameJoinSign extends PluginBase implements Listener{
   
   public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this,$this);
