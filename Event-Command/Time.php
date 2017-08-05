@@ -1,3 +1,4 @@
+
 <?php
 
 namespace GameManager/Time.php;
@@ -20,9 +21,14 @@ class Main extends PluginBase implements Listener{
     @mkdir($this->getDataFolder());
     $level = [
       $level => 'world',
-    ]
+    ];
   }
   
+	
+  public function onDisable(){
+	$this->getConfig()->save();
+  }
+	
   public function tick(){
 		$level = $this->getConfig()->get("level");
 		$world = $this->getServer()->getLevelByName("$level")->getPlayers();
