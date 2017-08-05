@@ -7,7 +7,7 @@ use pocketmine\event\Listener;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\utils\TextFormat as Color;
 
-class Main extends PluginBase implements Listener{
+class GamesManagerDP/Event-Command/Time extends PluginBase implements Listener{
   
   public $minute = 0;   /*Time minute*/
   public $second = 60; /*Time second*/
