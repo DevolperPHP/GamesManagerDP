@@ -1,6 +1,6 @@
-o<?php
+<?php
 
-namespace GamesManagerDP/GameJoinSign;
+namespace GamesManagerDP/Event-Command/GameJoinSign;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
