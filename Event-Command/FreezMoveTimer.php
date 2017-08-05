@@ -1,13 +1,13 @@
 <?php
 
-namespace GamesManagerDP/FreezMoveTimer;
+namespace GamesManagerDP/Event-Command/FreezMoveTimer;
 
 use pocketmine\plugin\PluginBase;
 use podketmine\event\Listener;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\event\player\PlayerMoveEvent;
 
-class GamesManagerDP/FreezMoveTimer extends PluginBase implements Listener{
+class GamesManagerDP/Event-Command/FreezMoveTimer extends PluginBase implements Listener{
   
   public $minute = 0;
   public $second = 60;
