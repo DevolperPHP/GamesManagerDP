@@ -20,8 +20,7 @@ class GamesManagerDP/Event-Command/GameTimer extends PluginBase implements Liste
   
   public $minute = 0;
   public $second = 60;
-  public $counttype = "down"; 
-  
+  public $counttype = "down";   
   public function onEnable(){
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
     $this->getServer()->getScheduler()->scheduleRepeatingTask(new Task($this),20);    @mkdir($this->getDataFolder());
@@ -69,7 +68,7 @@ class GamesManagerDP/Event-Command/GameTimer extends PluginBase implements Liste
 			}
       
       if($this->second < 0 && $this->second > 0){
-        $p->teleport($this->getServer()->getLevelbyName("l")->getSafeSpawn());
+        $p->teleport($this->getServer()->getLevelbyName("leave")->getSafeSpawn());
       }
 	}
 }
